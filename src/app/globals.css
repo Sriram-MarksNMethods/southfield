@@ -1,15 +1,26 @@
 @import "tailwindcss";
 @import "lenis/dist/lenis.css";
 
-/* Southfield design tokens: "Night Pool" palette, Scope One headings, Hanken Grotesk for everything else. */
+/* Southfield design tokens: client olive + terracotta palette, Scope One headings, Hanken Grotesk for everything else. */
 @theme {
-  --color-night: #0f1a20;
-  --color-surface: #16262e;
-  --color-deep: #0a2a31;
-  --color-pool: #5cc0c3;
-  --color-lamp: #e8c38c;
-  --color-moon: #dfe9e8;
-  --color-muted: #a9bcbd;
+  /* Client palette. The page background is always one of the dark tones in
+     ToneBackground.tsx, so these text + button colours work everywhere. */
+  --color-night: #2b3023; /* deepest olive: photo shading, overlays (no charcoal backgrounds) */
+  --color-surface: #4f573f; /* olive, a step darker */
+  --color-deep: #5a634b; /* olive: header bar, menu, footer */
+  --color-pool: #b8755a; /* terracotta */
+  --color-sand: #b7a58a;
+  --color-sage: #b8b99a;
+  --color-grey: #808285;
+  --color-moon: #f0ede3; /* text */
+  --color-muted: #d9d6c6; /* secondary text */
+  --color-lamp: #b7a58a; /* small labels / accents (sand) */
+  --color-btn: #b7a58a; /* solid button */
+  --color-on-btn: #231f20;
+  --color-btn-ripple: #b8755a; /* hover: first wave */
+  --color-btn-fill: #f0ede3; /* hover: final fill */
+  --color-on-btn-fill: #231f20;
+  --color-line: #f0ede3; /* outline buttons */
 
   --font-heading: var(--font-scope), Georgia, serif;
   --font-sans: var(--font-hanken), system-ui, sans-serif;
@@ -21,6 +32,31 @@
   --ease-soft: cubic-bezier(0.22, 0.8, 0.16, 1);
 }
 
+
+
+/* Text sitting on a photo always keeps the cream-on-dark colours. */
+.on-photo {
+  color: var(--color-moon);
+  --color-moon: #f0ede3;
+  --color-muted: #d9d6c6;
+  --color-lamp: #b7a58a;
+  --color-btn: #b7a58a;
+  --color-on-btn: #231f20;
+  --color-btn-ripple: #b8755a;
+  --color-btn-fill: #f0ede3;
+  --color-on-btn-fill: #231f20;
+  --color-line: #f0ede3;
+}
+
+/* Satin olive (same finish as the olive page background) for the footer and menu. */
+.satin-olive {
+  background:
+    radial-gradient(85% 70% at 85% 12%, #7b816c 0%, transparent 65%),
+    radial-gradient(70% 60% at 8% 92%, #4b503f 0%, transparent 70%),
+    linear-gradient(115deg, transparent 28%, #6f766099 46%, transparent 64%),
+    linear-gradient(165deg, #525945 0%, #5a634b 55%, #525945 100%);
+}
+
 @layer base {
   html {
     /* Wide screens: everything is sized in rem, so growing the root size from
@@ -29,7 +65,7 @@
     @media (min-width: 1680px) {
       font-size: clamp(16px, 0.95vw, 24px);
     }
-    background-color: var(--color-night);
+    background-color: var(--color-deep);
     color: var(--color-moon);
     -webkit-tap-highlight-color: transparent;
   }
@@ -124,7 +160,7 @@
   }
 }
 
-/* Button hover: an aqua ripple, then the fill colour, pour in as circles from the
+/* Button hover: a ripple (--color-btn-ripple), then the fill colour, pour in as circles from the
    point where the cursor enters, and drain out towards where it leaves.
    ButtonFill.tsx sets --x/--y (entry point) and --d (big enough to cover the button). */
 @layer components {
@@ -150,11 +186,11 @@
   transform: translate(-50%, -50%) scale(0);
 }
 .fill-btn::before {
-  background: var(--color-pool);
+  background: var(--color-btn-ripple);
   transition: transform 0.5s cubic-bezier(0.65, 0, 0.35, 1) 0.08s;
 }
 .fill-btn::after {
-  background: var(--fill, var(--color-moon));
+  background: var(--fill, var(--color-btn-fill));
   transition: transform 0.6s cubic-bezier(0.65, 0, 0.35, 1);
 }
 .fill-btn:hover::before,

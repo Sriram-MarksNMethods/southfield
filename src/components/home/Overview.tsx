@@ -1,6 +1,4 @@
-import ParallaxImage from "@/components/ParallaxImage";
 import SectionHeading from "@/components/SectionHeading";
-import Drift from "@/components/Drift";
 import CountUp from "@/components/CountUp";
 
 const stats = [
@@ -9,17 +7,13 @@ const stats = [
   { value: 520, suffix: "", prefix: "400 - ", label: "Sq. yd plots" },
 ];
 
-// Mākena "Overview": a wide photo pushed to the right, then the label + heading on
-// the left and the paragraph on the right. Two smaller photos below drift at
-// different speeds, like Mākena's scattered photo pairs.
+// Mākena "Overview": the label + heading on the left, the paragraph and stats on
+// the right. Text only: the wide photo above and the drifting photo pair below
+// were removed 2026-11-19 ("too crowded"); the next section opens with a photo.
 export default function Overview() {
   return (
-    <section data-tone="1" className="pb-20 md:pb-32">
-      <div className="pl-5 md:pl-[18vw]">
-        <ParallaxImage src="/images/night-courtyard-pool.jpg" alt="Courtyard pool lit at night between villa wings" sizes="85vw" className="aspect-[4/3] md:aspect-[16/7]" />
-      </div>
-
-      <div className="wrap mt-14 grid gap-10 md:mt-20 lg:grid-cols-12 lg:gap-16">
+    <section data-tone="1" className="section-y">
+      <div className="wrap grid gap-12 lg:grid-cols-12 lg:gap-20">
         <SectionHeading kicker="Overview" className="lg:col-span-6 lg:col-start-2">
           Private, family-friendly lorem living in Southfield
         </SectionHeading>
@@ -39,15 +33,6 @@ export default function Overview() {
             ))}
           </dl>
         </div>
-      </div>
-
-      <div className="wrap mt-20 grid grid-cols-12 items-start gap-4 md:mt-28">
-        <Drift speed={0.08} className="col-span-8 md:col-span-6 md:col-start-2">
-          <ParallaxImage src="/images/night-villa-modern.jpg" alt="Modern villa with every window lit at night" sizes="50vw" className="aspect-[4/3]" />
-        </Drift>
-        <Drift speed={0.32} className="col-span-4 mt-32 md:col-span-3 md:col-start-10 md:mt-56">
-          <ParallaxImage src="/images/night-garden-pool.jpg" alt="Garden pool among palms at night" sizes="25vw" className="aspect-[3/4]" />
-        </Drift>
       </div>
     </section>
   );

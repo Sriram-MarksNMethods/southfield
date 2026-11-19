@@ -70,7 +70,7 @@ export default function Explorer() {
       </Canvas>
 
       {/* soft dark edges, like Primland */}
-      <div aria-hidden="true" className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_55%,rgb(15_26_32/0.65))]" />
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_55%,rgb(43_48_35/0.65))]" />
 
       {/* 1. Intro */}
       <AnimatePresence>
@@ -102,7 +102,7 @@ export default function Explorer() {
                 initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 2, duration: 0.8 }}
-                className="mt-8 inline-flex min-w-60 items-center justify-center rounded-[2px] bg-[#fffbe7] px-8 py-4 text-xs font-medium tracking-[0.2em] text-[#456a4b] uppercase fill-btn [--fill:#456a4b] hover:text-[#fffbe7]"
+                className="mt-8 inline-flex min-w-60 items-center justify-center rounded-[2px] bg-[#f0ede3] px-8 py-4 text-xs font-medium tracking-[0.2em] text-[#5a634b] uppercase fill-btn [--fill:#5a634b] hover:text-[#f0ede3]"
               >
                 Explore the map
               </motion.button>
@@ -164,7 +164,7 @@ export default function Explorer() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, transition: { delay: 0.6, duration: 0.3 } }}
             exit={{ opacity: 0, transition: { duration: 0.3 } }}
-            className="absolute right-9 bottom-[calc(5rem+env(safe-area-inset-bottom))] left-9 bg-[#fffbe7] px-5 pt-6 pb-10 text-[#456a4b] md:left-auto md:w-full md:max-w-[33.5rem] lg:right-5 lg:bottom-24"
+            className="absolute right-9 bottom-[calc(5rem+env(safe-area-inset-bottom))] left-9 bg-[#f0ede3] px-5 pt-6 pb-10 text-[#5a634b] md:left-auto md:w-full md:max-w-[33.5rem] lg:right-5 lg:bottom-24"
           >
             <button type="button" onClick={() => setActive(null)} aria-label="Close" className="absolute top-3 right-3 grid size-8 place-items-center rounded-full hover:bg-black/5">
               <svg viewBox="0 0 20 20" className="size-4" aria-hidden="true"><path d="M5 5l10 10M15 5L5 15" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" /></svg>

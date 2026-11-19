@@ -30,7 +30,7 @@ export default function StickyActions() {
         type="button"
         onClick={() => openEnquiry("Brochure")}
         aria-label="Download brochure"
-        className={`fixed right-6 bottom-6 z-30 hidden items-center gap-2 rounded-full bg-lamp px-5 py-3 font-medium [@media(max-height:820px)]:p-3.5 text-night shadow-[0_12px_40px_-12px_rgb(0_0_0/0.6)] transition-[translate,opacity] duration-500 ease-soft fill-btn [--fill:var(--color-moon)] lg:inline-flex ${
+        className={`fixed right-6 bottom-6 z-30 hidden items-center gap-2 rounded-full bg-btn px-5 py-3 font-medium [@media(max-height:820px)]:p-3.5 text-on-btn shadow-[0_12px_40px_-12px_rgb(0_0_0/0.6)] transition-[translate,opacity] duration-500 ease-soft fill-btn hover:text-on-btn-fill lg:inline-flex ${
           show ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-6 opacity-0"
         }`}
       >
@@ -43,7 +43,7 @@ export default function StickyActions() {
           <svg viewBox="0 0 20 20" className="size-4" aria-hidden="true"><path d="M6.6 3.5l1.7 3.4-1.6 1.3a9 9 0 004.9 4.9l1.3-1.6 3.4 1.7-.6 2.9c-6.6.4-12.4-5.4-12-12z" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" /></svg>
           Call us
         </a>
-        <button type="button" onClick={() => openEnquiry("Site visit")} className="h-14 bg-lamp font-medium text-night">
+        <button type="button" onClick={() => openEnquiry("Site visit")} className="h-14 bg-btn font-medium text-on-btn">
           Enquire now
         </button>
       </div>

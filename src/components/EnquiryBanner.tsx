@@ -1,3 +1,4 @@
+import Link from "next/link";
 import ParallaxImage from "./ParallaxImage";
 import EnquiryButton from "./EnquiryButton";
 import { buttonOutline, buttonSolid } from "@/lib/ui";
@@ -5,7 +6,7 @@ import { buttonOutline, buttonSolid } from "@/lib/ui";
 // Full-width closing banner used at the bottom of most pages.
 export default function EnquiryBanner() {
   return (
-    <section data-tone="1" className="px-3 pb-3 sm:px-4 md:px-6 md:pb-6 2xl:px-10">
+    <section data-tone="1" className="on-photo px-3 pb-3 sm:px-4 md:px-6 md:pb-6 2xl:px-10">
       <ParallaxImage
         src="/images/night-villa-glass.jpg"
         alt="Villa with a glass gable lit at night"
@@ -18,7 +19,7 @@ export default function EnquiryBanner() {
           <h2 className="mx-auto max-w-[16ch] text-heading">A finer way of living awaits</h2>
           <p className="mx-auto mt-5 max-w-xl text-moon/90 md:text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Book a visit and walk through a show villa.</p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
-            <EnquiryButton className={buttonSolid}>Book a site visit</EnquiryButton>
+            <Link href="/contact" className={buttonSolid}>Book a site visit</Link>
             <EnquiryButton purpose="Brochure" className={buttonOutline}>Download brochure</EnquiryButton>
           </div>
         </div>

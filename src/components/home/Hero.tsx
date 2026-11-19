@@ -32,7 +32,7 @@ export default function Hero() {
   );
 
   return (
-    <section ref={root} data-tone="0" aria-label="Southfield" className="relative h-svh min-h-[36rem] overflow-hidden">
+    <section ref={root} data-tone="0" aria-label="Southfield" className="on-photo relative h-svh min-h-[36rem] overflow-hidden">
       <div data-hero-photo className="absolute inset-0">
         <ParallaxImage
           src="/images/night-villa-pool.jpg"

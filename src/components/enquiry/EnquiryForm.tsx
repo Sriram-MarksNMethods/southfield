@@ -101,7 +101,7 @@ export default function EnquiryForm({
                 {purposes.map((p) => (
                   <label key={p} className="cursor-pointer">
                     <input type="radio" name="purpose" value={p} defaultChecked={p === defaultPurpose} className="peer sr-only" />
-                    <span className="inline-flex rounded-[2px] border border-moon/30 px-5 py-3 text-sm text-moon/85 transition-colors peer-checked:border-lamp peer-checked:bg-lamp peer-checked:text-night peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-lamp hover:border-moon">
+                    <span className="inline-flex rounded-[2px] border border-moon/30 px-5 py-3 text-sm text-moon/85 transition-colors peer-checked:border-btn peer-checked:bg-btn peer-checked:text-on-btn peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-lamp hover:border-moon">
                       {purposeLabels[p]}
                     </span>
                   </label>
@@ -130,7 +130,7 @@ export default function EnquiryForm({
         <button
           type="submit"
           data-state={state}
-          className={`relative inline-flex items-center justify-center gap-2 justify-self-start overflow-hidden bg-lamp font-medium text-night transition-[background-color,width] duration-300 fill-btn [--fill:var(--color-moon)] data-[state=sent]:bg-pool ${
+          className={`relative inline-flex items-center justify-center gap-2 justify-self-start overflow-hidden bg-btn font-medium text-on-btn transition-[background-color,width] duration-300 fill-btn hover:text-on-btn-fill data-[state=sent]:bg-pool ${
             variant === "full" ? "mt-4 h-14 min-w-56 rounded-[2px] px-9 text-xs tracking-[0.2em] uppercase" : "h-12 rounded-full px-7"
           }`}
         >

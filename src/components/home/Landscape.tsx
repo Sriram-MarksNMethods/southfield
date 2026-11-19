@@ -8,7 +8,7 @@ import { buttonOutline } from "@/lib/ui";
 // and a photo on the right that rises past the band's top edge.
 export default function Landscape() {
   return (
-    <section data-tone="3">
+    <section data-tone="2">
       <ParallaxImage src="/images/dusk-villa-sky.jpg" alt="Villa at dusk under a coloured sky" sizes="100vw" amount={11} className="h-[70svh] min-h-[24rem] md:h-[88svh]" />
 
       <div>

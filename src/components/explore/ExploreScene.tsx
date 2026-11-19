@@ -267,8 +267,8 @@ export default function ExploreScene({
 
   return (
     <>
-      <color attach="background" args={["#0f1a20"]} />
-      <fog attach="fog" args={["#0f1a20", 34, 80]} />
+      <color attach="background" args={["#2b3023"]} />
+      <fog attach="fog" args={["#2b3023", 34, 80]} />
       <ambientLight intensity={1.4} />
       <directionalLight position={[10, 20, 5]} intensity={1.2} />
 
@@ -285,8 +285,8 @@ export default function ExploreScene({
           <Html key={s.name} position={toWorld(s.x, s.y)} center zIndexRange={[20, 10]}>
             <button type="button" onClick={() => onPick(i)} className="group relative grid size-12 place-items-center" aria-label={`Visit ${s.name}`}>
               <span className={`absolute inset-0 rounded-full bg-white/55 transition-transform duration-1000 ease-[cubic-bezier(0.19,1,0.22,1)] ${active === i ? "scale-100" : "scale-50 group-hover:scale-75"}`} />
-              <span className={`relative size-2 rounded-full ${active === i ? "bg-black" : "bg-[#456a4b]"}`} />
-              <span className="absolute top-1/2 left-full ml-2 flex h-7 -translate-y-1/2 items-center bg-white px-3 text-[0.65rem] font-medium tracking-[0.2em] whitespace-nowrap text-[#456a4b] uppercase opacity-0 transition-opacity group-hover:opacity-100">{s.name}</span>
+              <span className={`relative size-2 rounded-full ${active === i ? "bg-black" : "bg-[#5a634b]"}`} />
+              <span className="absolute top-1/2 left-full ml-2 flex h-7 -translate-y-1/2 items-center bg-white px-3 text-[0.65rem] font-medium tracking-[0.2em] whitespace-nowrap text-[#5a634b] uppercase opacity-0 transition-opacity group-hover:opacity-100">{s.name}</span>
             </button>
           </Html>
         ))}
@@ -296,8 +296,8 @@ export default function ExploreScene({
           <Html key={s.name} position={toWorld(s.x, s.y)} center zIndexRange={[20, 10]}>
             <span className="group relative grid size-8 cursor-default place-items-center" tabIndex={0} aria-label={s.name}>
               <span className="absolute inset-0 scale-50 rounded-full bg-white transition-transform duration-700 group-hover:scale-75" />
-              <span className="relative size-1.5 rounded-full bg-[#456a4b]" />
-              <span className="absolute top-1/2 left-full ml-2 flex h-7 -translate-y-1/2 items-center bg-white px-3 text-[0.65rem] font-medium tracking-[0.2em] whitespace-nowrap text-[#456a4b] uppercase opacity-0 transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100">{s.name}</span>
+              <span className="relative size-1.5 rounded-full bg-[#5a634b]" />
+              <span className="absolute top-1/2 left-full ml-2 flex h-7 -translate-y-1/2 items-center bg-white px-3 text-[0.65rem] font-medium tracking-[0.2em] whitespace-nowrap text-[#5a634b] uppercase opacity-0 transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100">{s.name}</span>
             </span>
           </Html>
         ))}

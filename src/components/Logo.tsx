@@ -1,14 +1,23 @@
-// Dummy logo until the client's real one arrives: a low sun over three field
-// lines, next to the wordmark.
-export default function Logo({ className = "" }: { className?: string }) {
+// Client's SouthField logos, exactly as supplied:
+// - "block": olive wordmark on the cream block (from Southfield-Logo-new.jpg).
+// - "light": cream wordmark on transparent, for dark solid backgrounds
+//   (from Southfield-Logo-for-dark-bg.png).
+// Pass the height in className (e.g. h-10); defaults to 3.4em.
+const logos = {
+  block: { src: "/images/logo-southfield-cream.png", width: 1200, height: 450 },
+  light: { src: "/images/logo-southfield-dark-bg.png", width: 1200, height: 357 },
+};
+
+export default function Logo({ variant = "light", className = "" }: { variant?: keyof typeof logos; className?: string }) {
+  const logo = logos[variant];
   return (
-    <span className={`inline-flex items-center gap-2.5 ${className}`}>
-      <svg viewBox="0 0 40 40" aria-hidden="true" className="h-[1.6em] w-[1.6em]">
-        <path d="M8 24a12 12 0 0 1 24 0" fill="none" stroke="currentColor" strokeWidth="2" />
-        <path d="M4 24h32M9 29h22M14 34h12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-        <circle cx="20" cy="24" r="4.5" className="fill-lamp" />
-      </svg>
-      <span className="font-heading text-[1.35em] leading-none tracking-wide">Southfield</span>
-    </span>
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
+      src={logo.src}
+      alt="SouthField, Globus South"
+      width={logo.width}
+      height={logo.height}
+      className={`inline-block w-auto align-middle ${className || "h-[3.4em]"}`}
+    />
   );
 }

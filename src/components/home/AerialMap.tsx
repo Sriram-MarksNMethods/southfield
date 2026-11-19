@@ -220,7 +220,7 @@ export default function AerialMap() {
 
 
   return (
-    <section ref={root} data-tone="2" aria-label="Location" className="relative h-[1200svh]">
+    <section ref={root} data-tone="2" aria-label="Location" className="on-photo relative h-[1200svh]">
       <div className="sticky top-0 h-svh overflow-hidden">
         {/* The map: anchored top-left, always covers the screen, zooms around the first stop */}
         <div
@@ -332,7 +332,7 @@ export default function AerialMap() {
         {/* Into the full-screen 3D explorer, like Primland's "Explore the map" */}
         <Link
           href="/explore"
-          className="absolute bottom-[calc(5rem+env(safe-area-inset-bottom))] left-5 z-[3] inline-flex items-center gap-3 rounded-[2px] bg-[#fffbe7] px-6 py-3.5 text-xs font-medium tracking-[0.2em] text-[#456a4b] uppercase fill-btn [--fill:#456a4b] hover:text-[#fffbe7] max-md:hidden lg:bottom-24"
+          className="absolute bottom-[calc(5rem+env(safe-area-inset-bottom))] left-5 z-[3] inline-flex items-center gap-3 rounded-[2px] bg-[#f0ede3] px-6 py-3.5 text-xs font-medium tracking-[0.2em] text-[#5a634b] uppercase fill-btn [--fill:#5a634b] hover:text-[#f0ede3] max-md:hidden lg:bottom-24"
         >
           Explore the map
           <svg viewBox="0 0 20 20" className="size-4" aria-hidden="true"><path d="M4 10h12m0 0l-5-5m5 5l-5 5" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
@@ -343,11 +343,11 @@ export default function AerialMap() {
           <article
             key={s.name}
             aria-hidden={i !== stop}
-            className={`absolute right-9 bottom-[calc(5rem+env(safe-area-inset-bottom))] left-9 z-[3] bg-[#fffbe7] px-5 pt-6 pb-10 text-[#456a4b] [@media(max-height:820px)]:pt-4 [@media(max-height:820px)]:pb-6 transition-opacity duration-300 ease-out md:left-auto md:w-full md:max-w-[33.5rem] lg:right-5 lg:bottom-24 ${
+            className={`absolute right-9 bottom-[calc(5rem+env(safe-area-inset-bottom))] left-9 z-[3] bg-[#f0ede3] px-5 pt-6 pb-10 text-[#5a634b] [@media(max-height:820px)]:pt-4 [@media(max-height:820px)]:pb-6 transition-opacity duration-300 ease-out md:left-auto md:w-full md:max-w-[33.5rem] lg:right-5 lg:bottom-24 ${
               i === stop ? "pointer-events-auto opacity-100 delay-300" : "pointer-events-none opacity-0"
             }`}
           >
-            <div ref={(el) => { barsRef.current[i] = el; }} className="absolute top-0 right-0 left-0 h-1 origin-left scale-x-0 bg-[#e9dcb4] will-change-transform" />
+            <div ref={(el) => { barsRef.current[i] = el; }} className="absolute top-0 right-0 left-0 h-1 origin-left scale-x-0 bg-[#e9c9b5] will-change-transform" />
             <h3 className="pb-3 text-center font-sans text-base">{s.name}</h3>
             <div className="relative w-full overflow-hidden pt-[37.5%] md:pt-[56.25%] md:[@media(max-height:820px)]:pt-[37.5%]">
               <Image src={s.src} alt={s.alt} fill sizes="(min-width: 768px) 33.5rem, 90vw" className="object-cover" />

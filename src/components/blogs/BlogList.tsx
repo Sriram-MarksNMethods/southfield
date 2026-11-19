@@ -45,7 +45,7 @@ export default function BlogList() {
                 type="button"
                 aria-pressed={c === category}
                 onClick={() => setCategory(c)}
-                className="rounded-[2px] border border-moon/25 px-4 py-2 text-[0.7rem] tracking-[0.2em] text-moon/80 uppercase transition-colors hover:border-moon hover:text-moon aria-pressed:border-lamp aria-pressed:bg-lamp aria-pressed:text-night"
+                className="rounded-[2px] border border-moon/25 px-4 py-2 text-[0.7rem] tracking-[0.2em] text-moon/80 uppercase transition-colors hover:border-moon hover:text-moon aria-pressed:border-btn aria-pressed:bg-btn aria-pressed:text-on-btn"
               >
                 {c}
               </button>

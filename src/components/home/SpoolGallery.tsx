@@ -5,7 +5,7 @@ import { useLenis } from "@/components/SmoothScroll";
 
 // Ported 1:1 from Sage's gallery (index.html #gallery + initGallery()): photos on a
 // 3D coil that winds by itself, one photo per swipe, centre photo opens full screen.
-// Only the colours changed (Night Pool) and the photos (Unsplash placeholders).
+// Only the colours changed (client palette) and the photos (Unsplash placeholders).
 
 const photos = [
   { file: "night-villa-pool", group: "Villa", alt: "Villa lit up at night above its pool" },
@@ -340,7 +340,7 @@ export default function SpoolGallery() {
   }, []);
 
   return (
-    <section ref={sectionRef} id="gallery" data-tone="2" className="overflow-hidden py-10 md:py-12 lg:py-20 2xl:py-24">
+    <section ref={sectionRef} id="gallery" data-tone="4" className="overflow-hidden py-10 md:py-12 lg:py-20 2xl:py-24">
       <div className="wrap">
         <h2 className="text-center text-heading uppercase">Gallery</h2>
       </div>
@@ -375,7 +375,7 @@ export default function SpoolGallery() {
       </div>
 
       {/* Full-screen viewer: every photo sits in the same 16:9 frame */}
-      <dialog data-lightbox aria-label="Photo viewer" className="m-auto max-h-none max-w-none bg-transparent p-0 text-moon backdrop:bg-night/95">
+      <dialog data-lightbox aria-label="Photo viewer" className="on-photo m-auto max-h-none max-w-none bg-transparent p-0 text-moon backdrop:bg-night/95">
         <div className="flex h-svh w-screen flex-col items-center justify-center gap-6 px-4 md:px-24">
           <figure className="w-full max-w-[min(72rem,calc((100svh-12rem)*16/9))]">
             {/* eslint-disable-next-line @next/next/no-img-element */}

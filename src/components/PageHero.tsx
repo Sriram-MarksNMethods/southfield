@@ -46,7 +46,7 @@ export default function PageHero({
   );
 
   return (
-    <section ref={root} data-tone={tone} className="relative h-[78svh] min-h-[30rem] overflow-hidden">
+    <section ref={root} data-tone={tone} className="on-photo relative h-[78svh] min-h-[30rem] overflow-hidden">
       <div data-page-photo className="absolute inset-0">
         <ParallaxImage src={src} alt={alt} sizes="100vw" priority amount={10} className="size-full" />
       </div>

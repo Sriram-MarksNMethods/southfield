@@ -2,12 +2,12 @@ import Link from "next/link";
 import { nav, site } from "@/lib/site";
 import Logo from "./Logo";
 
-const label = "text-[0.65rem] tracking-[0.28em] text-lamp uppercase";
+const label = "font-sans text-xs font-semibold tracking-[0.24em] text-moon uppercase";
 
 // Mākena footer: a solid colour band, the logo on the left, link columns on the right.
 export default function Footer() {
   return (
-    <footer className="bg-deep pt-16 pb-28 text-moon/90 md:pt-24 lg:pb-12">
+    <footer className="satin-olive pt-16 pb-28 text-moon/90 md:pt-24 lg:pb-12">
       <div className="wrap grid gap-12 lg:grid-cols-12">
         <div className="lg:col-span-4">
           <Link href="/" aria-label="Southfield home" className="inline-block text-2xl text-moon">

@@ -14,12 +14,13 @@ export const site = {
     "https://www.google.com/maps?q=17.385,78.4867&z=12&output=embed",
 };
 
+// photo = shown in the menu overlay while that link is hovered.
 export const nav = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About us" },
-  { href: "/specifications", label: "Specifications" },
-  { href: "/blogs", label: "Blogs" },
-  { href: "/contact", label: "Contact" },
+  { href: "/", label: "Home", photo: "/images/night-villa-pool.jpg" },
+  { href: "/about", label: "About us", photo: "/images/villa-garden.jpg" },
+  { href: "/specifications", label: "Specifications", photo: "/images/interior-warm-lounge.jpg" },
+  { href: "/blogs", label: "Blogs", photo: "/images/tropical-pool-deck.jpg" },
+  { href: "/contact", label: "Contact", photo: "/images/twilight-tropical-villa.jpg" },
 ];
 
 export const purposes = ["Site visit", "Brochure", "General enquiry"] as const;
